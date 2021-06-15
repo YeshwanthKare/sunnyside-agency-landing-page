@@ -17,7 +17,7 @@ body {
 }
 
 .header-container > img {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -48,8 +48,9 @@ body {
 
 .nav-container a {
 	color: #fff;
-	margin-right: 50px;
+	margin-right: 40px;
 	text-decoration: none;
+    	/* padding: 8px 16px; */
 	font-size:18px;
 	font-family: 'Barlow', sans-serif;
 	transition: all 0.25s ease-in-out 0%;
@@ -91,20 +92,109 @@ body {
 }
 
 .grid-container {
-	/* display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr; */
-	/* grid-auto-flow: row; */
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 50%);
+	grid-template-rows: repeat(auto-fill, 1fr);
+	grid-auto-flow: dense;
 }
 
+.transform-brand, .stand-out {
+	width: 60%;
+	text-align:left;
+	margin: auto;
+}
+
+.transform-brand h2 {
+	width: 90%;
+}
+
+.transform-brand h2 , .stand-out h2 {
+    /* font-size: 18px; */
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+}
+
+.transform-brand p , .stand-out p {
+	font-family: 'Barlow', sans-serif;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.transform-brand h4, .stand-out h4 {
+	font-size: 18px;
+    	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	width: 23.4%;
+}
+
+.transform-brand h4:hover {
+	border-bottom: 3px solid hsl(51, 100%, 49%);
+	cursor: pointer;
+}
+
+.stand-out h4:hover {
+	border-bottom: 3px solid hsl(7, 99%, 70%);
+	cursor: pointer;
+}
+
+.grid-image-2 img, .grid-image-3 img, .graphic-design img, .photography img {
+	object-fit: contain;
+	width: 100%;
+}
+
+.photography, .graphic-design {
+	position: relative;
+}
+
+.graphic-design-text, .photography-text {
+	position: absolute;
+	bottom: 40px;
+	margin: auto;
+	width: 50%;
+	right: 0;
+	left: 0;
+	text-align: center;
+}
+
+.graphic-design-text h4, .photography-text h4 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 18px;	
+}
+
+.graphic-design-text h4 {
+	color: hsl(167, 40%, 24%);
+	
+}
+
+.photography-text h4 {
+	color: hsl(198, 62%, 26%);
+}
+
+.graphic-design-text p {
+	color: hsl(167, 40%, 24%);
+}
+
+.photography-text p {
+	color: hsl(198, 62%, 26%);
+}
+
+.photography-text p, .graphic-design-text p {
+	font-family: 'Barlow', sans-serif;
+	margin-top: 30px;
+}
+
+
 .image-gallery {
-	display: flex;
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 1fr;
 	/* background-color: black; */
 }
 
 .image-gallery div {
 	height: auto;
-	width: 337px;
+	/* width: 337px; */
 	flex-shrink: 0;
 	flex-grow: 0;
 }
@@ -113,4 +203,112 @@ body {
 	object-fit: contain;
 	width:100%;
 }
+
+.testimonials {
+	margin-top: 120px;
+	margin-bottom: 100px;
+	text-align: center;
+}
+
+.testimonials h6 {
+	font-size: 16px;
+	font-weight: 600;
+    	font-family: 'Fraunces', serif;
+	color: hsl(210, 4%, 67%);
+	letter-spacing: 4px;
+}
+
+.testimonial-table {
+	margin-top: 60px;
+	padding: 30px;
+	margin-right: 100px;
+	margin-left: 100px;
+}
+
+tr, td {
+	/* border: 1px solid #222; */
+	padding: 20px;
+
+}
+
+th {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.client-image img {
+	object-fit: contain;
+	width: 100%;
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+}
+
+.paragraph-container {
+	
+}
+
+.paragraph {
+	font-size: 16px;
+	font-family: 'Barlow', sans-serif;
+}
+
+.para {
+	margin-top: 20px;
+}
+
+.head {
+	margin-top: 30px;
+}
+
+.p {
+	margin-top: -10px;
+	font-size: 14px;
+	color: hsl(210, 4%, 67%);
+}
+
+.footer {
+	height: 280px;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	background-color:hsl(167, 33%, 65%);
+}
+
+.footer-logo {
+	font-family: 'Fraunces', serif;
+	font-weight:700;
+	font-size: 24px;
+	color: hsl(167, 40%, 24%);
+	/* color: hsl(168, 34%, 41%); */
+	margin-top: 50px;
+}
+
+.footer-nav {
+	margin-bottom: 40px;
+}
+
+.footer-nav a {
+	text-decoration: none;
+	color: hsl(167, 40%, 24%);
+	/* color: hsl(168, 34%, 41%); */
+	margin: 0 20px 0 20px;
+}
+
+.social-icons {
+	color: hsl(167, 40%, 24%);
+	margin-bottom: 20px;
+}
+
+.social-icons i {
+	margin: 0 10px 0 10px;
+}
+
+.social-icons i:hover {
+	cursor: pointer;
+}
+
 
