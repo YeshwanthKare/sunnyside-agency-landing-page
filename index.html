@@ -13,19 +13,28 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+  <script src="/script.js"></script>
 </head>
 <body>
   <div class="header-container">
-    <img src="/images/desktop/image-header.jpg" alt="">
+    <img class="header-image" srcset="/images/mobile/image-header.jpg 375w, /images/desktop/image-header.jpg 1366w" alt="hero">
     <div class="nav-head-container">
       <div class="nav-container">
         <h3 class="nav-logo">sunnyside</h3>
         <div class="nav-list">
-          <a href="#"><span>About</span></a>
-          <a href="#"><span>Services</span></a>
-          <a href="#"><span>Projects</span></a>
-          <a href="#" class="contact"><span>Contact</span></a>
+          <a class="hide" href="#"><span>About</span></a>
+          <a class="hide" href="#"><span>Services</span></a>
+          <a class="hide" href="#"><span>Projects</span></a>
+          <a class="hide" href="#"><span>Contact</span></a>
+          <span class="mobile-menu"><img src="/images/icon-hamburger.svg" alt=""></span>
+          <div class="menu-list">
+            <p><span>About</span></p>
+            <p><span>Services</span></p>
+            <p><span>Projects</span></p>
+            <p><span>Contact</span></p>
+          </div>
         </div>
       </div>
       <h1 class="heading">WE ARE CREATIVES</h1>
@@ -36,7 +45,7 @@
   </div>
   <div class="main">
     <div class="grid-container">
-      <div class="transform-brand grid">
+      <div class="transform-brand grid trans">
         <h2>Transform your brand</h2>
         <p>We are a full-service creative agency specializing 
           in helping brands grow fast. 
@@ -45,7 +54,7 @@
         </p>
         <h4>Learn More</h4>
       </div>
-      <div class="grid-image-2 grid">
+      <div class="grid-image-2 grid egg-mobile">
         <img src="/images/desktop/image-transform.jpg" alt="transfrom">
       </div>
       <div class="grid-image-3 grid">
@@ -190,5 +199,19 @@
       Coded by <a href="#">Yeshwanth Kare</a>.
     </div>
   </div>
+
+  <script>
+    $(document).ready(() => {
+      $(".mobile-menu").click((e) => {
+        e.stopPropagation();
+        $(".menu-list").fadeToggle("fast")
+      })
+
+      $(document).click(() => {
+        $(".menu-list").hide()
+      })
+    })
+  </script>
+
 </body>
 </html>

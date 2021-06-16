@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    box-sizing: border-box;
 }
 
 .attribution { 
@@ -44,6 +45,30 @@ body {
 	padding-right: 20px;
 	padding-left: 20px;
 	align-items: center;
+	position: relative;
+}
+
+.mobile-menu {
+	cursor: pointer;
+	display: none;
+}
+
+.menu-list {
+	position: absolute;
+	right: 20px;
+	background-color: aliceblue;
+	color: black;
+	padding: 10px 20px 0 20px;
+	border-radius: 4px;
+	display: none;
+}
+
+.menu-list p{
+	cursor: pointer;
+}
+
+.menu-list p:hover {
+	color:cadetblue ;
 }
 
 .nav-container a {
@@ -128,12 +153,12 @@ body {
 }
 
 .transform-brand h4:hover {
-	border-bottom: 3px solid hsl(51, 100%, 49%);
+	box-shadow: 0px 5px 0px 0px hsl(51, 100%, 49%);
 	cursor: pointer;
 }
 
 .stand-out h4:hover {
-	border-bottom: 3px solid hsl(7, 99%, 70%);
+	box-shadow: 0px 5px 0px 0px hsl(7, 99%, 70%);
 	cursor: pointer;
 }
 
@@ -309,6 +334,106 @@ th {
 
 .social-icons i:hover {
 	cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.heading {
+		text-align: center;
+		justify-self: center;
+		letter-spacing: 6px;
+		font-size: 38px;
+	}
+
+	.mobile-menu {
+		display: block;
+	}
+
+	.menu-list {
+		display: block;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.arrow {
+		margin-top: 70px;
+	}
+}
+
+
+
+@media screen and (max-width: 375px) {
+
+	.heading {
+		text-align: center;
+		justify-self: center;
+		letter-spacing: 6px;
+		font-size: 38px;
+	}
+
+	.mobile-menu {
+		display: block;
+	}
+
+	.menu-list {
+		display: block;
+	}
+
+	.hide {
+		display: none;
+	}
+
+	.arrow {
+		margin-top: 70px;
+	}
+
+	.grid-container {
+		grid-template-columns: 1fr;
+		/* grid-template-rows: repeat(8, 1fr); */
+	}
+
+	.transform-brand, .stand-out {
+		margin: auto;
+		width: 80%;
+		text-align: center;
+		padding: 80px 0 80px 0;
+	}
+
+	.transform-brand p, .stand-out p {
+		margin: 30px 0 30px 0;
+		
+	}
+
+	.transform-brand h4, .stand-out h4 {
+		text-align: center;
+		margin: auto;
+		width: 36%;
+	}
+
+	.testimonial-table {
+		display: none;
+	}
+
+	.grid-image-2 {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+
+	.transform-brand {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 2;
+		grid-row-end: 3;
+	}
+
+	.graphic-design .graphic-design-text{
+		
+	}
 }
 
 
