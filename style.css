@@ -350,11 +350,11 @@ th {
 		display: block;
 	}
 
-	.menu-list {
-		display: block;
+	.hide {
+		display: none;
 	}
 
-	.hide {
+	.testimonial-table{
 		display: none;
 	}
 
@@ -374,25 +374,29 @@ th {
 		font-size: 38px;
 	}
 
+	.header-container > img {
+		width: 100%;
+		object-fit:cover;
+	}
+
 	.mobile-menu {
 		display: block;
 	}
 
-	.menu-list {
+	/* .menu-list {
 		display: block;
-	}
+	} */
 
 	.hide {
 		display: none;
 	}
 
 	.arrow {
-		margin-top: 70px;
+		margin-top: 120px;
 	}
 
 	.grid-container {
 		grid-template-columns: 1fr;
-		/* grid-template-rows: repeat(8, 1fr); */
 	}
 
 	.transform-brand, .stand-out {
@@ -431,8 +435,15 @@ th {
 		grid-row-end: 3;
 	}
 
-	.graphic-design .graphic-design-text{
-		
+	.graphic-design, .photography {
+		grid-template-rows: 400px;
+	}
+
+	.graphic-design > img, .photography > img {
+		object-fit:cover;
+		height: fit-content;
+		width: 100%;
+		/* grid-row: 1/2; */
 	}
 }
 
