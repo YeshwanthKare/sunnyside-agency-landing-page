@@ -152,9 +152,9 @@ body {
 
 .transform-brand h4, .stand-out h4 {
 	font-size: 18px;
-    	font-family: 'Playfair Display', serif;
+    	font-family: 'Fraunces', serif;
 	font-weight: 700;
-	width: 23.4%;
+	width: 24%;
 }
 
 .transform-brand h4:hover {
@@ -393,7 +393,7 @@ th {
 	}
 
 	.grid-container {
-		grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+		grid-template: repeat(8, 1fr) / repeat(1, 1fr);
 	}
 
 	.egg-mobile {
@@ -402,6 +402,59 @@ th {
 		grid-row-start: 1;
 		grid-row-end: 2;
 	}
+
+	
+
+	.transform-brand, .stand-out {
+		width: 100%;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.transform-brand h2, .stand-out h2 {
+		width: 60%;
+		margin-top: 20px;
+	}
+
+	.transform-brand p, .stand-out p {
+		text-align: center;
+		letter-spacing: 1px;
+		font-size: 17px;
+		color: #7d8181;
+		font-weight: 600;
+		padding: 0 28px 0 28px;
+	}
+	
+
+	.transform-brand h4, .stand-out h4 {
+		/* transform: translateX(-120px); */
+		width: 30%;
+		margin-top: 20px;
+		margin-bottom: 50px;
+	}
+
+	.graphic-design, .photography {
+		/* height: fit-content; */
+		grid-row: span 2;
+		/* height: 200%; */
+		height: 100%;
+		position: relative;
+	}
+
+	.graphic-design img, .photography img {
+		
+		height: 100%;
+		object-fit: unset;
+		
+	}
+
+	.image-gallery {
+		grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+	}
+
 	
 }
 
