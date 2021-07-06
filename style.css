@@ -363,7 +363,7 @@ th {
 		display: none;
 	}
 
-	table {
+	.testimonials {
 		display: none;
 	}
 
@@ -393,7 +393,7 @@ th {
 	}
 
 	.grid-container {
-		grid-template: repeat(8, 1fr) / repeat(1, 1fr);
+		grid-template: repeat(4, 1fr) / repeat(1, 1fr);
 	}
 
 	.egg-mobile {
@@ -437,18 +437,41 @@ th {
 	}
 
 	.graphic-design, .photography {
-		/* height: fit-content; */
 		grid-row: span 2;
-		/* height: 200%; */
 		height: 100%;
 		position: relative;
+		height: 500px;
 	}
 
-	.graphic-design img, .photography img {
-		
+	.graphic-design img, .photography img {		
 		height: 100%;
 		object-fit: unset;
 		
+	}
+
+	.testimonial-mobile-container {
+		margin-top: 120px;
+		margin-bottom: 100px;
+		text-align: center;
+	}
+
+	.testimonial-grid {
+		display: grid;
+		grid-template: repeat(3, 1fr)/repeat(1, 1fr);
+		
+	}
+
+	.emily-container, .thomas-container, .jennie-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	.emily-container img, .thomas-container img, .jennie-container img {
+		border-radius: 50%;
+		height: 70px;
 	}
 
 	.image-gallery {
