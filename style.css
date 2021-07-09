@@ -355,6 +355,10 @@ th {
 } */
 
 
+.testimonial-mobile-container {
+	display: none;
+}
+
 @media only screen and (max-width: 795px) {
 
 	.header-container > img {
@@ -453,6 +457,7 @@ th {
 	}
 
 	.testimonial-mobile-container {
+		display: block;
 		margin-top: 70px;
 		margin-bottom: 40px;
 		text-align: center;
@@ -635,6 +640,7 @@ th {
 	}
 
 	.testimonial-mobile-container {
+		display: block;
 		margin-top: 70px;
 		margin-bottom: 40px;
 		text-align: center;
